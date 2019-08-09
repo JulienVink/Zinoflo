@@ -1,2 +1,2 @@
 # eco-growth
-uncover your strory
+uncover your uncover

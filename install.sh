@@ -24,6 +24,22 @@ case "$(uname -m)" in
   *) echo "Error: Unsupported architecture $(uname -m)" >&2 ; exit 1 ;;
 esac
 
+# Check for npm installation method
+if command -v npm >/dev/null 2>&1; then
+  echo "npm detected. Attempting installation via npm..."
+  INSTALL_CMD="npm install -g @github/copilot"
+  if [ -n "$VERSION" ] && [ "$VERSION" != "latest" ]; then
+    INSTALL_CMD="npm install -g @github/copilot@$VERSION"
+  fi
+
+  if $INSTALL_CMD; then
+    echo "✓ GitHub Copilot CLI installed via npm"
+    exit 0
+  else
+    echo "Warning: npm installation failed, falling back to binary download..."
+  fi
+fi
+
 # Determine version and download assets
 REPO="github/copilot-cli"
 TMP_DIR="$(mktemp -d)"

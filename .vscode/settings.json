@@ -1,0 +1,24 @@
+{
+    "editor.formatOnSave": true,
+    "workbench.editor.alwaysShowEditorActions": true,
+    "workbench.editor.autoLockGroups": {
+        "jupyter-notebook": true,
+        "agentSessionsWelcomePage": true,
+        "notebookOutputEditor": true,
+        "workbench.editor.processExplorer": false,
+        "repl": true,
+        "workbench.editors.gettingStartedInput": true,
+        "vscode.markdown.editor": true,
+        "imagePreview.previewEditor": true,
+        "vscode.audioPreview": true,
+        "vscode.videoPreview": true,
+        "jsProfileVisualizer.cpuprofile.table": true,
+        "jsProfileVisualizer.heapprofile.table": true,
+        "jsProfileVisualizer.heapsnapshot.table": true,
+        "mainThreadWebview-markdown.preview": true,
+        "workbench.input.interactive": true,
+        "gitlens.rebase": true
+    },
+    "workbench.editor.useModal": "all",
+    "workbench.editor.wrapTabs": true
+}
